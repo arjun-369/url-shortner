@@ -6,8 +6,8 @@ import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UrlRepository extends MongoRepository<Url, String>
-{
-    @Query("{shortLink:'?'}")
+public interface UrlRepository extends MongoRepository<Url, String> {
     public Url findByShortLink(String shortLink);
+
+    public Url findByOriginalUrl(String originalUrl);
 }

@@ -1,6 +1,7 @@
 package com.indus.url_shortening_service.model;
 
 
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.MongoId;
 
@@ -12,6 +13,7 @@ public class Url {
     @MongoId
     private String id;
 
+    @Indexed(unique = true)
     private String originalUrl;
     private String shortLink;
     private LocalDateTime creationDate;

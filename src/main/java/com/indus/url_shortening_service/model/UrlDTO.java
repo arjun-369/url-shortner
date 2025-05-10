@@ -5,9 +5,9 @@ public class UrlDTO {
     private String url;
     private String expirationDate;  // optional
 
-    public UrlDTO(String url, String expirayDate) {
+    public UrlDTO(String url, String expiryDate) {
         this.url = url;
-        this.expirationDate = expirayDate;
+        this.expirationDate = expiryDate;
     }
 
 
